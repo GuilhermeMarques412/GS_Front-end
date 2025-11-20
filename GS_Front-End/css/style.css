@@ -1,0 +1,173 @@
+:root {
+  --accent: #4f46e5;
+  --muted: #6b7280;
+  --bg: #f8fafc;
+  --maxw: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: #111;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* HEADER */
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+/* NAV */
+
+.menu-toggle {
+  display: none;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #444;
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent) !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    padding: 1rem;
+    margin-top: .5rem;
+    border-radius: 8px;
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+}
+
+/* HERO */
+
+.hero {
+  padding: 2rem 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 1rem;
+}
+
+/* CARDS */
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+/* GRID DE INTEGRANTES */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 1rem;
+}
+
+.team-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* FAQ */
+
+.acc-item {
+  width: 100%;
+  padding: .8rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: .4rem;
+}
+
+.acc-panel {
+  display: none;
+  padding: .6rem;
+  background: #f3f3f3;
+  border-radius: 6px;
+}
